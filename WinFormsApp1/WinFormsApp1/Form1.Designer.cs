@@ -30,7 +30,7 @@
         {
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
+            Clear = new Button();
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
@@ -53,7 +53,7 @@
             button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(31, 352);
             button1.Name = "button1";
-            button1.Size = new Size(116, 50);
+            button1.Size = new Size(238, 50);
             button1.TabIndex = 0;
             button1.Text = "0";
             button1.UseVisualStyleBackColor = true;
@@ -62,22 +62,23 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(153, 352);
+            button2.Location = new Point(275, 352);
             button2.Name = "button2";
             button2.Size = new Size(116, 50);
             button2.TabIndex = 1;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Clear
             // 
-            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(275, 352);
-            button3.Name = "button3";
-            button3.Size = new Size(116, 50);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            Clear.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Clear.Location = new Point(31, 408);
+            Clear.Name = "Clear";
+            Clear.Size = new Size(360, 50);
+            Clear.TabIndex = 2;
+            Clear.Text = "Clear";
+            Clear.UseVisualStyleBackColor = true;
+            Clear.Click += Clear_Click;
             // 
             // button4
             // 
@@ -255,7 +256,7 @@
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(Clear);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
@@ -268,7 +269,7 @@
 
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button Clear;
         private Button button4;
         private Button button5;
         private Button button6;
