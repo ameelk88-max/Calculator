@@ -32,6 +32,7 @@ namespace WinFormsApp1
                 Button button = (Button)sender;
                 Operators = button.Text; // Safe the operator you made
                 Ausgabe.Text = ""; // make textBox empty to be ready to write next numbers
+                currentOperation.Text= Operators;
                 return;
            }
 
