@@ -14,8 +14,9 @@ namespace WinFormsApp1
 
         private void ButtonClick(object sender, EventArgs e)// pressing numbers Methode, when you press something write it as text in textbox(Ausgabe)
         {
-            if (Ausgabe.Text == "0") {Ausgabe.Clear(); } // just dont want 0 on the left side of the number, because my textbox starts with a 0
+            
             Button Button = (Button)sender; // to be able to access the text of sender which is the value of the buttons in this project
+            if (Ausgabe.Text.Contains(",") && Button.Text =="," ) { return; } // if you already have "," you shouldn't be able to add more to the same number 
             Ausgabe.Text += Button.Text; // add the new numbers to the last
         }
 
@@ -50,6 +51,7 @@ namespace WinFormsApp1
 
         private void button17_Click(object sender, EventArgs e) // für (=) Click
         {
+            if(Ausgabe.Text == ""|| Operators =="") { return; }
             number2 = Convert.ToDouble(Ausgabe.Text); // safe the new number in textBox 
             Ausgabe.Text = ""; // empty textbox
 

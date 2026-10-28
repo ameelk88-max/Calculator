@@ -47,12 +47,13 @@
             Ausgabe = new TextBox();
             button17 = new Button();
             currentResult = new TextBox();
+            currentOperation = new TextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(31, 352);
+            button1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button1.Location = new Point(12, 320);
             button1.Name = "button1";
             button1.Size = new Size(238, 50);
             button1.TabIndex = 0;
@@ -62,18 +63,19 @@
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(275, 352);
+            button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button2.Location = new Point(256, 320);
             button2.Name = "button2";
             button2.Size = new Size(116, 50);
             button2.TabIndex = 1;
-            button2.Text = "button2";
+            button2.Text = ",";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += ButtonClick;
             // 
             // Clear
             // 
             Clear.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Clear.Location = new Point(31, 408);
+            Clear.Location = new Point(12, 376);
             Clear.Name = "Clear";
             Clear.Size = new Size(360, 50);
             Clear.TabIndex = 2;
@@ -83,8 +85,8 @@
             // 
             // button4
             // 
-            button4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(397, 352);
+            button4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button4.Location = new Point(378, 320);
             button4.Name = "button4";
             button4.Size = new Size(116, 50);
             button4.TabIndex = 3;
@@ -94,7 +96,8 @@
             // 
             // button5
             // 
-            button5.Location = new Point(31, 296);
+            button5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button5.Location = new Point(12, 264);
             button5.Name = "button5";
             button5.Size = new Size(116, 50);
             button5.TabIndex = 4;
@@ -104,8 +107,8 @@
             // 
             // button6
             // 
-            button6.Font = new Font("Microsoft Sans Serif", 8.25F);
-            button6.Location = new Point(153, 296);
+            button6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button6.Location = new Point(134, 264);
             button6.Name = "button6";
             button6.Size = new Size(116, 50);
             button6.TabIndex = 5;
@@ -115,8 +118,8 @@
             // 
             // button7
             // 
-            button7.Font = new Font("Microsoft Sans Serif", 8.25F);
-            button7.Location = new Point(275, 296);
+            button7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button7.Location = new Point(256, 264);
             button7.Name = "button7";
             button7.Size = new Size(116, 50);
             button7.TabIndex = 6;
@@ -126,8 +129,8 @@
             // 
             // button8
             // 
-            button8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.Location = new Point(397, 296);
+            button8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button8.Location = new Point(378, 264);
             button8.Name = "button8";
             button8.Size = new Size(116, 50);
             button8.TabIndex = 7;
@@ -137,8 +140,8 @@
             // 
             // button9
             // 
-            button9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.Location = new Point(397, 240);
+            button9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button9.Location = new Point(378, 208);
             button9.Name = "button9";
             button9.Size = new Size(116, 50);
             button9.TabIndex = 11;
@@ -148,8 +151,8 @@
             // 
             // button10
             // 
-            button10.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button10.Location = new Point(275, 240);
+            button10.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button10.Location = new Point(256, 208);
             button10.Name = "button10";
             button10.Size = new Size(116, 50);
             button10.TabIndex = 10;
@@ -159,8 +162,8 @@
             // 
             // button11
             // 
-            button11.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.Location = new Point(153, 240);
+            button11.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button11.Location = new Point(134, 208);
             button11.Name = "button11";
             button11.Size = new Size(116, 50);
             button11.TabIndex = 9;
@@ -170,8 +173,8 @@
             // 
             // button12
             // 
-            button12.Font = new Font("Microsoft Sans Serif", 8.25F);
-            button12.Location = new Point(31, 240);
+            button12.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button12.Location = new Point(12, 208);
             button12.Name = "button12";
             button12.Size = new Size(116, 50);
             button12.TabIndex = 8;
@@ -181,8 +184,8 @@
             // 
             // button13
             // 
-            button13.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button13.Location = new Point(397, 184);
+            button13.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button13.Location = new Point(378, 152);
             button13.Name = "button13";
             button13.Size = new Size(116, 50);
             button13.TabIndex = 15;
@@ -192,8 +195,8 @@
             // 
             // button14
             // 
-            button14.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button14.Location = new Point(275, 184);
+            button14.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button14.Location = new Point(256, 152);
             button14.Name = "button14";
             button14.Size = new Size(116, 50);
             button14.TabIndex = 14;
@@ -203,8 +206,8 @@
             // 
             // button15
             // 
-            button15.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button15.Location = new Point(153, 184);
+            button15.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button15.Location = new Point(134, 152);
             button15.Name = "button15";
             button15.Size = new Size(116, 50);
             button15.TabIndex = 13;
@@ -214,8 +217,8 @@
             // 
             // button16
             // 
-            button16.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button16.Location = new Point(31, 184);
+            button16.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button16.Location = new Point(12, 152);
             button16.Name = "button16";
             button16.Size = new Size(116, 50);
             button16.TabIndex = 12;
@@ -225,16 +228,17 @@
             // 
             // Ausgabe
             // 
-            Ausgabe.Location = new Point(31, 121);
+            Ausgabe.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Ausgabe.Location = new Point(12, 89);
             Ausgabe.Name = "Ausgabe";
-            Ausgabe.Size = new Size(482, 23);
+            Ausgabe.Size = new Size(482, 33);
             Ausgabe.TabIndex = 16;
-            Ausgabe.Text = "0";
             Ausgabe.TextAlign = HorizontalAlignment.Right;
             // 
             // button17
             // 
-            button17.Location = new Point(397, 408);
+            button17.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
+            button17.Location = new Point(378, 376);
             button17.Name = "button17";
             button17.Size = new Size(116, 50);
             button17.TabIndex = 17;
@@ -244,17 +248,31 @@
             // 
             // currentResult
             // 
-            currentResult.Location = new Point(31, 92);
+            currentResult.BackColor = SystemColors.InactiveCaptionText;
+            currentResult.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            currentResult.ForeColor = Color.GreenYellow;
+            currentResult.Location = new Point(12, 60);
             currentResult.Name = "currentResult";
             currentResult.Size = new Size(100, 23);
             currentResult.TabIndex = 18;
             currentResult.Text = "Result";
             // 
+            // currentOperation
+            // 
+            currentOperation.BackColor = Color.Black;
+            currentOperation.ForeColor = Color.GreenYellow;
+            currentOperation.Location = new Point(86, 60);
+            currentOperation.Name = "currentOperation";
+            currentOperation.Size = new Size(26, 23);
+            currentOperation.TabIndex = 19;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(634, 549);
+            BackColor = Color.Gray;
+            ClientSize = new Size(509, 569);
+            Controls.Add(currentOperation);
             Controls.Add(currentResult);
             Controls.Add(button17);
             Controls.Add(Ausgabe);
@@ -301,5 +319,6 @@
         private TextBox Ausgabe;
         private Button button17;
         private TextBox currentResult;
+        private TextBox currentOperation;
     }
 }
