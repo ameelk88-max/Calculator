@@ -89,6 +89,7 @@
             button4.TabIndex = 3;
             button4.Text = "/";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += OperatorenClick;
             // 
             // button5
             // 
@@ -131,6 +132,7 @@
             button8.TabIndex = 7;
             button8.Text = "*";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += OperatorenClick;
             // 
             // button9
             // 
@@ -141,6 +143,7 @@
             button9.TabIndex = 11;
             button9.Text = "-";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += OperatorenClick;
             // 
             // button10
             // 

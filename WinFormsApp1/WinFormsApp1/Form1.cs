@@ -5,7 +5,7 @@ namespace WinFormsApp1
         double number1; // safe first number
         double number2; // safe second number
         string Operators; // safe the operators
-        double ergebnis;
+        double ergebnis = 0;
         int operatorsInRow = 0; // How many times does this occur? because I need to know how many times operators are used before pressing "="
         public Form1()
         {
@@ -20,22 +20,25 @@ namespace WinFormsApp1
 
         private void OperatorenClick(object sender, EventArgs e) // Operators Methode
         {
+           
           operatorsInRow++; // increase this to know it is the first time
 
            if (operatorsInRow == 1) // if this is the first time you used operator
            { 
-            number1 = Convert.ToDouble(Ausgabe.Text); // safe the number that was written at first
-            Ausgabe.Text = ""; // make textBox empty to be ready to write next numbers
-            Button button = (Button)sender;
-            Operators = button.Text; // Safe the operator you made
+                number1 = Convert.ToDouble(Ausgabe.Text); // safe the number that was written as first number
+                Button button = (Button)sender;
+                Operators = button.Text; // Safe the operator you made
+                Ausgabe.Text = ""; // make textBox empty to be ready to write next numbers
+            
            }
 
 
             if (operatorsInRow == 2) 
             {
-                number2 = Convert.ToDouble(Ausgabe.Text); // safe the number that was written at first
-                Ausgabe.Text = ""; // make textBox empty to be ready to write next numbers
-                button17_Click(null,EventArgs.Empty);
+               // Button button = (Button)sender;
+                button17_Click(null,EventArgs.Empty); // calculate the first Operation at first
+                //Operators = button.Text;
+                OperatorenClick(sender, e);
             }
        
         
@@ -66,10 +69,12 @@ namespace WinFormsApp1
 
             }
             Ausgabe.Text = Convert.ToString(ergebnis); // write the result in textbox
-            // reset value of number1, number2 and operator
-            number1 = 0;
+            // reset value of number1,operator and operatorsinRow
             number2 = 0;
             Operators = "";
+            operatorsInRow = 0;
+
+            number1 = ergebnis; // new number 1
         }
 
         private void Clear_Click(object sender, EventArgs e) // when you press clear reset everything
@@ -79,6 +84,7 @@ namespace WinFormsApp1
             number2 = 0;
             ergebnis = 0;
             Operators = "";
+            operatorsInRow = 0;
         }
     }
 }
