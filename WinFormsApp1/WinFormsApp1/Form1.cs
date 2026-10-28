@@ -14,6 +14,7 @@ namespace WinFormsApp1
 
         private void ButtonClick(object sender, EventArgs e)// pressing numbers Methode, when you press something write it as text in textbox(Ausgabe)
         {
+            if (Ausgabe.Text == "0") { Ausgabe.Clear(); }
             Button Button = (Button)sender; //
             Ausgabe.Text += Button.Text; // add the new numbers to the last
         }

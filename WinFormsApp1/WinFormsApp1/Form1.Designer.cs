@@ -228,6 +228,8 @@
             Ausgabe.Name = "Ausgabe";
             Ausgabe.Size = new Size(482, 23);
             Ausgabe.TabIndex = 16;
+            Ausgabe.Text = "0";
+            Ausgabe.TextAlign = HorizontalAlignment.Right;
             // 
             // button17
             // 
